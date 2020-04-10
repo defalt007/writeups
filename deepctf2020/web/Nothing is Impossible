@@ -1,0 +1,20 @@
+This challenge is available at http://140.238.254.6:8003/ last checked at the time of commit
+
+https://user-images.githubusercontent.com/63468638/79012526-22ebce00-7b84-11ea-87e6-40371f93fadf.png
+
+and is a classic case of SSTI
+
+The Challenge hint points us towards the location of flag in the system /tmp/flag.php
+so already knowing the location
+we simply run
+
+system ('cat /tmp/flag.php');
+
+which gives us blank results, initially thought to be a mistake, it was intended from admins side
+
+so i checked for base64 which did the work
+system ('cat /tmp/flag.php | base64');
+PD9waHAKZWNobyAiZDMzcHtmNHN0X0NHMV9TU1JGX3AwdzNyISF9IjsK
+
+on decoding base64 we got out final flag value !
+d33p{f4st_CG1_SSRF_p0w3r!!}"
