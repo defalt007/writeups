@@ -1,0 +1,18 @@
+This challenge was available at http://140.238.254.6:8002/ last checked at 10-april-2020  2300 IST
+
+The index.html looks quite basic !
+![image](https://user-images.githubusercontent.com/63468638/79010184-10bb6100-7b7f-11ea-81cd-6d3751a1e69b.png)
+
+Lets view the page source !
+![image](https://user-images.githubusercontent.com/63468638/79010391-7871ac00-7b7f-11ea-8647-b3068b4de5d8.png)
+
+Thats is JSFuck !
+simply decode that using any online decoders !
+i used https://enkhee-osiris.github.io/Decoder-JSFuck/
+And got the output as follows
+
+if (document.forms[0].username.value == "corb3nik" && document.forms[0].password.value == "chickenachos") document.location = "4d4932602a75414640946d38ea6fefbf.php"
+
+Using these creds we login and get the FLAG !
+
+d33p{g0tta_kn0w_y0ur_J4v4Scr1pt}
