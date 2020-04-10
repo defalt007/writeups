@@ -1,0 +1,27 @@
+this challenge is available at http://140.238.254.6:8004/ last checked at the time of commit !
+
+the homepage tells a lot and guides us towards our flag
+
+![image](https://user-images.githubusercontent.com/63468638/79011878-a73d5180-7b82-11ea-82c9-64feee1f00ff.png)
+
+on moving ahead by clicking on the *view page source* 
+
+we get this crazy what you say and what he listens thing, after cracking my head for a while it finally made some sense
+
+so i made a get request as follows
+
+140.238.254.6:8004/?magic_word=d33p
+
+we went no where !
+
+so i tried to change the way i sent d33p
+d33pd33p
+this didnt work
+d3d33p3p
+worked for us 
+
+// The program removes any d33p found in the request so you need to craft the request to bypass this filter
+
+when we send d3d33p3p it removes the middle d33p but does not removes the d3----3p which then joins to form d33p and gives us our flag
+  
+What did you just say to me?!?! d33p{d33p_p33d} 
