@@ -1,0 +1,33 @@
+This challenge is available at http://140.238.254.6:8007/ last checked at the time of commit
+
+This challenge is a bit advanced challenge as it would require BURP to be done effectively, yet we can do this with the developer tools in the browser AKA inspect element
+
+go to the developer options for the *SUBMIT* button
+
+here we are gonna change this line
+
+https://user-images.githubusercontent.com/63468638/79014689-0b631400-7b89-11ea-8cab-fbc6af0420c8.png
+
+<option value="encode_base64">Encode base64</option>
+to
+<option value="methods">Encode base64</option>
+and send submit
+
+what we get in response are the methods available to send, what we want are 
+:instance_eval, :instance_exec
+
+https://user-images.githubusercontent.com/63468638/79014747-29307900-7b89-11ea-99af-0c1d91ed8310.png
+
+we go with instance_exec first
+and get a hacker detected response
+https://user-images.githubusercontent.com/63468638/79014412-74965780-7b88-11ea-8db1-eaa0032da44e.png
+
+then we use the other available method instance_eval
+but now we have to change the value being sent as well
+
+https://user-images.githubusercontent.com/63468638/79014524-b3c4a880-7b88-11ea-8b0a-75e0679a652c.png
+`ls` and method=instance_eval
+we get the list of files now similiary we use cat to get our flag
+`cat flag.txt` and method=instance_eval
+
+d33p{send_is_a_very_dangerous_method}
