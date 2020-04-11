@@ -1,0 +1,9 @@
+This challenge gives us a file
+
+https://github.com/defalt007/writeups/files/4464175/w4rmup.txt
+
+which contains Hexa-decimal binary decimal and octal data
+on decoding it we get our flag
+
+d33p  {Ju5t_4_N0rm4l  _Ch4ll__ Isn`t_1t?}
+d33p{Ju5t_4_N0rm4l_Ch4ll__Isn`t_1t?}
